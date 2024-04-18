@@ -14,7 +14,7 @@ services:
       - ./data:/data
       - ./Metatrader:/root/Metatrader
     environment:
-      - VNC_PW=default_vnc_pw
+      - PW_VNC=default_pw_vnc
     networks:
       mynetwork:
         ipv4_address: 172.${FOLDER_NAME}.0.2
