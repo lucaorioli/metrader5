@@ -18,7 +18,7 @@ RUN Xdummy -install
 
 # ----------------------------------------------------------------------------
 
-FROM ejtrader/pyzmq:dev
+#FROM ejtrader/pyzmq:dev
 
 USER root
 ENV WINEPREFIX=/root/.wine
@@ -95,7 +95,7 @@ RUN apk update && apk add samba-winbind wine && ln -s /usr/bin/wine64 /usr/bin/w
 
 
 WORKDIR /$HOME/
-EXPOSE 5900 15555 15556 15557 15558
+#EXPOSE 5900 15555 15556 15557 15558
 CMD ["/usr/bin/supervisord","-c","/etc/supervisord.conf"]
 
 
