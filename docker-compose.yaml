@@ -17,9 +17,9 @@ services:
       - VNC_PW=default_vnc_pw
     networks:
       mynetwork:
-        ipv4_address: 172.1.0.2
+        ipv4_address: 172.${FOLDER_NAME}.0.2
 networks:
   mynetwork:
     ipam:
       config:
-        - subnet: 172.1.0.0/16
+        - subnet: 172.${FOLDER_NAME}.0.0/16
