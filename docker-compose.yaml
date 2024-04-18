@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  app:
+    container_name: metatradertest
+    image: lucaorioli/metatrader5:current
+    restart: unless-stopped
+    ports:
+      - '5900:5900'
+      - '15515:15555'
+      - '15516:15556'
+      - '15517:15557'
+      - '15518:15558'
+    volumes:
+      - ./data:/data
+      - ./Metatrader:/root/Metatrader
+    environment:
+      - PW_VNC=default_pw_vnc
+    networks:
+      mynetwork:
+        ipv4_address: 172.31.0.2
+
+networks:
+  mynetwork:
+    ipam:
+      config:
+        - subnet: 172.31.0.0/16
