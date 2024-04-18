@@ -16,4 +16,4 @@ echo "La varibile numero progetto è " $FOLDER_NAME
 export FOLDER_NAME
 
 # Esegui docker-compose up
-docker-compose up -d
+docker compose up -d
