@@ -18,7 +18,7 @@ RUN Xdummy -install
 
 # ----------------------------------------------------------------------------
 
-#FROM ejtrader/pyzmq:dev
+FROM ejtrader/pyzmq:dev
 
 USER root
 ENV WINEPREFIX=/root/.wine
