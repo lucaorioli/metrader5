@@ -87,7 +87,7 @@ COPY assets/xinit/xinitrc.d /etc/X11/xinit/xinitrc.d
 
 COPY assets/x11vnc-session.sh /root/x11vnc-session.sh
 COPY assets/start.sh /root/start.sh
-
+RUN chmod +x /root/x11vnc-session.sh /root/start.sh
 
 RUN apk update && apk add samba-winbind wine && ln -s /usr/bin/wine64 /usr/bin/wine
 
