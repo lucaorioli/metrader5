@@ -1,4 +1,4 @@
-![example workflow](https://github.com/ejtraderLabs/Metatrader5-Docker/actions/workflows/docker-image.yml/badge.svg)
+
 
 
 # vnc-alpine
@@ -10,14 +10,11 @@ The container is meant to serve a basis for containerised X11 applications wine 
 - Openbox minimal Window Manager
 - Graphical login
 - wine64
-- pyzmq and zmq
-- python3
 
-Based on Alpine Linux, the container is less than 250 MB in size. Most of this is the X11 window system wine python3 and pyzmq. 
+Based on Alpine Linux, the container is less than 250 MB in size. Most of this is the X11 window system wine. 
 # Extra:
 
-- Metatrader 5 64bit
-- ejtraderMT expert adviser datafeed [ejtraderMT](https://github.com/ejtraderLabs/ejtraderMT) 
+- Metatrader 5 64bit (need to create a dir "Metatrader" with all the content of a Metatrader5 installation dir)
 
 
 
@@ -25,27 +22,15 @@ Based on Alpine Linux, the container is less than 250 MB in size. Most of this i
 
 Metatrader 5 on docker and VNC
 
-### VNC LOGIN
+git clone the repo
 
+change the name of metatrader5 directory created in one number from 1 to 253 (this number will be used for differentiate containers (if you want run many mt5 in the same host)
+
+### VNC LOGIN (password set in docker-compose.yaml)
+
+For graphical login page (after vnc login)
 ```
 login: root
 password: root
 ```
 
-run and build image named as ejtradermt and run container named as ejtradermt
-
-```bash
-make run
-```
-
-build image named ejtradermt
-
-```bash
-make build
-```
-
-login to shell
-
-```bash
- make shell
-```
