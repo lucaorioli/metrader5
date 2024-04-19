@@ -2,7 +2,7 @@ version: '3.8'
 services:
   app:
     container_name: metatrader_${FOLDER_NAME}
-    image: lucaorioli/metatrader5:current
+    image: lucaorioli/metatrader5:alpine
     restart: unless-stopped
     ports:
       - '990${FOLDER_NAME}:5900'
